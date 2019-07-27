@@ -1,5 +1,5 @@
 function arkaFood(price, voucher, distance, tax) {
-    var vvoucher = [['ARKAFOOD5', 50000, 50, 50000], ['DITRAKTIRDEMY', 25000, 60, 30]]
+    var vvoucher = [['ARKAFOOD5', 50000, 50, 50000], ['DITRAKTIRDEMY', 25000, 60, 30000]]
     var ttax = 5;
     var postalFee = 5000;
     var fee = 0;
@@ -8,8 +8,8 @@ function arkaFood(price, voucher, distance, tax) {
         if(voucher == vvoucher[i][0]){
             if(price >= vvoucher[i][1]){
                 disc = price / 100 * vvoucher[i][2]
-                if(disc>50000){
-                    disc = 50000;
+                if(disc>vvoucher[i][3]){
+                    disc = vvoucher[i][3];
                 }
             }
             fee = price - disc;
