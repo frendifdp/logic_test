@@ -3,6 +3,7 @@ function arkaFood(price, voucher, distance, tax) {
     var ttax = 5;
     var postalFee = 5000;
     var fee = 0;
+    var disc = 0;
     for(i=0;i<vvoucher.length;i++){
         if(voucher == vvoucher[i][0]){
             if(price >= vvoucher[i][1]){
